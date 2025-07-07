@@ -1,0 +1,12 @@
+/* variables globales definidas en :root */
+:root {
+    
+    --color-principal: #468ead;
+    /* Azul verdoso suave para botones o elementos destacados */
+    --color-secundario: #0b3e50;
+    /* Azul oscuro para títulos, texto importante o encabezados */
+    --color-fondo: #f5f5f5;
+    /* Gris muy claro para el fondo general (contraste suave) */
+    --color-error: #e74c3c;
+    /* ⚠️ Rojo intenso para mensajes de error o alertas */
+}
