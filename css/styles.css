@@ -3,4 +3,132 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
 }
+
+/* estilos para el body */
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-fondo);  /* color suave de fondo  */
+    color: var(--color-principal);  /* color del texto */
+    line-height: 2.0;   /* espaciado entre líneas */
+}
+
+/* contenedor principal del generador QR */
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* sombra negra suave */
+    padding: 40px;  /* espaciado interno del contenedor */
+    width: 100%;
+    max-width: 500px;  /* alto maximo del contenedor  */
+    text-align: center;
+}
+
+/* titulo  */
+h1 {
+    color: var(--color-secundario);  /* color azul oscuro para destacar */
+    margin-bottom: 15px;
+    font-size: 40px;  /* tamaño de titulo */
+}
+
+p {
+    font-size: 20px;
+}
+
+/* estilos para el formulario */
+.qr-form {
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+/* campo de enlaces */
+.qr-link-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #dddcdc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+/* efecto visual al enfocar el input */
+.qr-link-input:focus {
+    border-color: var(--color-secundario);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--color-sombra-focus);
+}
+
+/* botón para generar QR */
+.qr-generate-btn {
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    width: 100%;
+    transition: all 0.3s;
+}
+
+/* efecto hover del botón */
+.qr-generate-btn:hover {
+    background-color: var(--efecto-hover);
+    transform: translateY(-1px);
+}
+
+
+/* código QR generado */
+.qr-code-container {
+    margin: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--color-fondo-qrcode);  /* fondo para QR */ 
+    display: none;
+}
+
+/* imagen del código QR generado */
+#qr-image {
+    max-width: 100%;
+    height: auto;
+    border: 10px solid white;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  /* sombra suave para el QR generado */
+}
+
+/* 📌 botón para descargar el código QR */
+.qr-download-btn {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: all 0.3s;
+
+}
+
+/* 📌 hover del botón de descarga */
+.qr-download-btn:hover {
+    background-color: var(--efecto-hover);
+    transform: translateY(-1px);
+}
+
+/* mensaje de error */
+.qr-message-error {
+    color: var(--color-error);  /* rojo de alerta */
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+

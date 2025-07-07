@@ -1,12 +1,18 @@
 /* variables globales definidas en :root */
 :root {
-    
-    --color-principal: #468ead;
-    /* Azul verdoso suave para botones o elementos destacados */
-    --color-secundario: #0b3e50;
-    /* Azul oscuro para títulos, texto importante o encabezados */
+    /* colores pricipales */
+    --color-principal: #26627c;   
+    --color-secundario: #2e53b9;  
+    --efecto-hover: #1a3a8f;     
+
+    /* colores de fondo */
     --color-fondo: #f5f5f5;
-    /* Gris muy claro para el fondo general (contraste suave) */
-    --color-error: #e74c3c;
-    /* ⚠️ Rojo intenso para mensajes de error o alertas */
+    --color-fondo-qrcode: #f8f9fa;
+    
+    /* efecto visual */
+    --color-sombra-focus: rgba(67, 97, 238, 0.4);  /* sombra al enfocar input */
+
+    /* mensaje de error */
+    --color-error: #e74c3c;  /* texto de error */
+   
 }
