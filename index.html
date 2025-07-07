@@ -14,7 +14,23 @@
 
 <body>
 
-    <div class="container"></div>
+    <div class="container">
+        <h1>Generador QR</h1>
+        <p>Ingresa La URL Para Generar El Código QR</p>
+
+        <div class="qr-input-group">
+            <input type="text" id="link-input" class="qr-link-input" placeholder="Ej: https://www.ejemplo.com">
+            <button id="generate-btn" class="qr-generate-btn" >Generar QR</button>
+        </div>
+
+        <div id="error-message" class="qr-message-error"></div>
+
+        <div id="qr-code" class="qr-code-container">
+            <img id="qr-image" src="" alt="Código QR">
+            <button id="download-btn" class="qr-download-btn" download="mi-codigo-qr-png" >Descargar QR</button>
+        </div>
+
+    </div>
 
     <!-- enlace al archivo javascript -->
     <script src="js/main.js"></script>
