@@ -14,20 +14,36 @@
 
 <body>
 
+    <!-- 📌 contenedor principal de la aplicación -->
     <div class="container">
+        <!-- titulo de la aplicación -->
         <h1>Generador QR</h1>
+        <!-- descripción para guiar al usuario -->
         <p>Ingresa La URL Para Generar El Código QR</p>
 
-        <div class="qr-input-group">
-            <input type="text" id="link-input" class="qr-link-input" placeholder="Ej: https://www.ejemplo.com">
-            <button id="generate-btn" class="qr-generate-btn" >Generar QR</button>
-        </div>
+        <!-- 📌 formulario principal para ingresar la URL -->
+        <form action="" id="qr-form" class="qr-form">
+            <div class="qr-input-group">
+                <!-- ✅ campo de entrada para la URL -->
+                <!-- usa type="url" para validación automática en navegadores -->
+                <input type="url" id="link-input" class="qr-link-input" placeholder="Ej: https://www.ejemplo.com"
+                    required>
 
+                <!-- botón para generar el código QR -->
+                <button type="submit" id="generate-btn" class="qr-generate-btn">Generar QR</button>
+            </div>
+        </form>
+
+        <!-- ⚠️ contenedor para mostrar errores si la URL es inválida -->
         <div id="error-message" class="qr-message-error"></div>
 
+        <!-- 📌 contenedor del código QR generado y botón de descarga -->
         <div id="qr-code" class="qr-code-container">
-            <img id="qr-image" src="" alt="Código QR">
-            <button id="download-btn" class="qr-download-btn" download="mi-codigo-qr-png" >Descargar QR</button>
+            <!-- ✅ imagen que muestra el código QR generado -->
+            <!-- ⚠️ src vacío por defecto, se actualizará con JS -->
+            <img id="qr-image" class="qr-code-image" src="" alt="Código QR Generado">
+            <!-- ✅ enlace para descargar el QR generado como imagen -->
+            <a id="download-btn" class="qr-download-btn" download="mi-codigo-qr-png">Descargar QR</a>
         </div>
 
     </div>
