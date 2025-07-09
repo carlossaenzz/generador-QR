@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    ;
+    
 
     // selecciono elementos del DOM por Id
     // guardo en variables os elementos HTML para poder controlarlos
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // función gereratorQR
     function generatorQR() {
-        const inputValue = input.ariaValue.trim();
+        const inputValue = input.inputValue.trim();
 
         // verifica que el campo no este vacío
         if (!inputValue) {
@@ -25,16 +25,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         clearError();  // limpia mensaje de error si ya había
         const finalInput = processedInput(inputValue);
-        generatorQRCode(processedInput);
+        generatorQRCode(finalInput);
     }
 
     // función para procesar el input
     function processedInput(rawInput) {
         if (
-            !rawInput.startWith('http://') &&
-            !rawInput.startWith('https://') &&
-            !rawInput.startWith('mailto:') &&
-            !rawInput.startWith('tel:')
+            !rawInput.startsWith('http://') &&
+            !rawInput.startsWith('https://') &&
+            !rawInput.startsWith('mailto:') &&
+            !rawInput.startsWith('tel:')
         )
             return 'https://' + rawInput;
 
@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // función que genera el QR y lo muestra
-    function generatorQRCode(date) {
-        const encodedInput = encodeURIComponent(date);
-        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&date=${encodedInput}&format=png&margin=${Data.now()}`;
+    function generatorQRCode(data) {
+        const encodedInput = encodeURIComponent(data);
+        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&date=${encodedInput}&format=png&margin=${Date.now()}`;
 
         qrImage.src = qrUrl; // inserta el QR generado en la imagen
         qrContainer.style.display = 'block';  // muestra el contenedor con el QR
