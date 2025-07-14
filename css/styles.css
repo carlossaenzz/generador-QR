@@ -18,7 +18,7 @@ body {
     line-height: 2.0;   /* espaciado entre líneas */
 }
 
-/* contenedor principal del generador QR */
+/* 📌 contenedor principal del generador QR */
 .container {
     background-color: white;
     border-radius: 10px;
@@ -40,14 +40,28 @@ p {
     font-size: 20px;
 }
 
-/* estilos para el formulario */
+/* 📌 estilos para el formulario */
 .qr-form {
     margin-bottom: 20px;
     position: relative;
-
 }
 
-/* campo de enlaces */
+/* código QR generado */
+.qrcode-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--color-fondo-qrcode);  /* fondo para QR */ 
+}
+
+#qrcode-container {
+    max-width: 220px; /* ancho maximo  */
+}
+
+/* ✅ campo de enlaces */
 .qr-link-input {
     width: 100%;
     padding: 15px;
@@ -75,7 +89,6 @@ p {
     font-size: 1rem;
     font-weight: 600;
     margin-top: 20px;
-    /* margin-bottom: 20px; */
     width: 100%;
     transition: all 0.3s;
 }
@@ -84,51 +97,5 @@ p {
 .qr-generate-btn:hover {
     background-color: var(--efecto-hover);
     transform: translateY(-1px);
-}
-
-
-/* código QR generado */
-.qr-code-container {
-    margin: 25px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: var(--color-fondo-qrcode);  /* fondo para QR */ 
-    display: none;
-}
-
-/* imagen del código QR generado */
-#qr-image {
-    max-width: 100%;
-    height: auto;
-    border: 10px solid white;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  /* sombra suave para el QR generado */
-}
-
-/* 📌 botón para descargar el código QR */
-.qr-download-btn {
-    display: inline-block;
-    background-color: var(--color-secundario);
-    color: white;
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 10px;
-    font-weight: 600;
-    margin-top: 15px;
-    transition: all 0.3s;
-
-}
-
-/* 📌 hover del botón de descarga */
-.qr-download-btn:hover {
-    background-color: var(--efecto-hover);
-    transform: translateY(-1px);
-}
-
-/* mensaje de error */
-.qr-message-error {
-    color: var(--color-error);  /* rojo de alerta */
-    margin-top: 10px;
-    font-size: 0.9rem;
 }
 
